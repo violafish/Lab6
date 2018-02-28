@@ -151,6 +151,18 @@ public class Pokemon {
         this.name = theName;
     }
 
+    /**
+     *
+     * @param somePokemon some pokemon.
+     */
+    public void setHitPoints0(final Pokemon somePokemon) {
+        somePokemon.hitPoints = 0;
+    }
+    /**
+     * is true when the game ends.
+     */
+    public boolean opponentDefeated = false;
+
 
 
     /**
@@ -204,6 +216,7 @@ public class Pokemon {
                         + (opponent.hitPoints - totalDamage) + " hit points");
             } else {
                 System.out.println(opponent.name + " has been defeated!");
+                opponentDefeated = true;
             }
             /*
              * Set the opponents hitPoints appropriately.
